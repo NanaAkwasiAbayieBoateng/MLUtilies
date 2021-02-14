@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """A setuptools based setup module.
 
 See:
@@ -89,16 +91,17 @@ setup(
         #   5 - Production/Stable
         'Development Status :: 3 - Alpha',
         #'Development Status :: 5 - Production/Stable',
-        'Intended Audience :: Machine Learning Developers',
+        #'Intended Audience :: Machine Learning Developers',
         'Operating System :: Microsoft :: Windows :: Windows 10',
-        'License :: OSI Approved :: GNU License',
+        #'License :: OSI Approved :: GNU License',
         #'Programming Language :: Python :: 3'
         # Indicate who your project is intended for
-        'Intended Audience :: Developers',
+        #'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
 
         # Pick your license as you wish
         'License :: OSI Approved :: MIT License',
+         #license="GPL",
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate you support Python 3. These classifiers are *not*
