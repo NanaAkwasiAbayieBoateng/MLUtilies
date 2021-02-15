@@ -1,7 +1,8 @@
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
-
+import numpy as np
+from matplotlib import pyplot as plt
 
 def plotconfusionmatrix(y_test,pred,file_loc,p=0.5,normalize=True):
     
