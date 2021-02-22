@@ -1,16 +1,15 @@
 from sklearn import preprocessing
-le = preprocessing.LabelEncoder()
-
-#y=  le.fit_transform(str(data['color']))
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.pipeline import Pipeline
 
+le = preprocessing.LabelEncoder()
 
-class multicolumnlabelencoder:
-    '''
-     This function performs label encoding for multiple columns
-    '''
+#y=  le.fit_transform(str(data['color']))
+
+
+
+class MultiColumnLabelEncoder:
     def __init__(self,columns = None):
         self.columns = columns # array of column names to encode
 
@@ -23,9 +22,11 @@ class multicolumnlabelencoder:
         LabelEncoder(). If no columns specified, transforms all
         columns in X.
         '''
+        
         output = X.copy()
         if self.columns is not None:
             for col in self.columns:
+                output[col]= output[col].astype(str)
                 output[col] = LabelEncoder().fit_transform(output[col])
         else:
             for colname,col in output.iteritems():
@@ -34,3 +35,4 @@ class multicolumnlabelencoder:
 
     def fit_transform(self,X,y=None):
         return self.fit(X,y).transform(X)
+

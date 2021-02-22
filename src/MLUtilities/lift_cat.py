@@ -1,5 +1,11 @@
 import pandas as pd
 
+""" 
+This function calculates the lift ratio for a binary
+target label.
+
+"""
+
 
 def lift_cat(Data,feature,target):
     '''
@@ -26,3 +32,12 @@ def lift_cat(Data,feature,target):
     col = d3.pop("feature_name")
     d3.insert(0, 'feature_name', col)
     return d3
+    
+    
+    
+def mult_lift(Data,columns,target):
+    df=[]
+    for name in columns:
+        df.append(lift_cat(Data,name,target))
+        df2 = pd.concat(df)
+    return df2    
