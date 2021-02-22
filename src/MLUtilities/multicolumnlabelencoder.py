@@ -9,7 +9,7 @@ le = preprocessing.LabelEncoder()
 
 
 
-class MultiColumnLabelEncoder:
+class multicolumnlabelencoder:
     def __init__(self,columns = None):
         self.columns = columns # array of column names to encode
 

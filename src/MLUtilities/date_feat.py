@@ -13,4 +13,4 @@ def date_feat(data,feature):
     data[feature+'_holiday'] = data[feature].isin(holidays).astype(float)
     return data
 
-date_feat(data,'offer_date')    
+   

@@ -1,5 +1,7 @@
-import numpy as np
 import pandas as pd
+import numpy as np
+from scipy import stats
+from scipy.stats import chi2_contingency
 
 def remove_correlation(data, threshold):
     ''' 
@@ -18,5 +20,7 @@ def remove_correlation(data, threshold):
 
 # Drop features 
     red_data=data.drop(drop_columns, axis=1)
-    print('Features Removed : {}'.format(drop_columns)
+    print('Features Removed : {}'.format(drop_columns))
+    #sys.stdout.write('Features Removed : {}'.format(drop_columns))
+
     return  drop_columns, red_data
