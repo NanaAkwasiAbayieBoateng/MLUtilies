@@ -1,6 +1,12 @@
 import pandas as pd
 
-def lift_boolean (lift_threshold,lift_df,actual_df):
+class lift_boolean:
+  """take the difference between two time columns"""
+  def __init__(self,x,y,bin_value):
+         self.x = x # array of column names to encode
+         self.y =y
+         self.bin_value = bin_value
+def gen_lift(lift_threshold,lift_df,actual_df):
     '''
      This function creates a boolean feature   for a given categorical feature
      by selecting those category levels that provide the highest lift ratio.

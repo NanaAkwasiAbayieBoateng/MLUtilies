@@ -1,5 +1,7 @@
 import seaborn as sns
 import pandas as pd
+from matplotlib import pyplot as plt
+
 
 def plot_correlation(data,file_loc):
     plt.figure(figsize=(10,10))
