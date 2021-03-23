@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 """A setuptools based setup module.
 This function takes the difference between two  date-time 
 columns x and y.
@@ -20,4 +21,4 @@ class Day_diff:
       #convert date difference greater than 90 days to one group
       c  = [self.bin_value+1 if i > self.bin_value else i for i in c  ]
 
-      return c
+      return pd.DataFrame({self.x.name +'_' +self.y.name+'_diff':c})

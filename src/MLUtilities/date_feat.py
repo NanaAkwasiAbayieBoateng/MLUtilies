@@ -1,4 +1,8 @@
 """This function generates other time based features """
+#data['offer_date'].values.dayofweek
+from datetime import datetime, timedelta
+from pandas.tseries.holiday import USFederalHolidayCalendar
+
 class date_feat:
     def __init__(self,df,feature):
         self.df = df # dataframe containing the feature

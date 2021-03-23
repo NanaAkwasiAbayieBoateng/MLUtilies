@@ -1,4 +1,6 @@
 import pandas as pd
+import functools
+
 
 """ 
 This function calculates the lift ratio for a binary
@@ -39,5 +41,6 @@ def mult_lift(Data,columns,target):
     df=[]
     for name in columns:
         df.append(lift_cat(Data,name,target))
+        #df = [lift_cat(Data,x, target) for x in columns]
         df2 = pd.concat(df)
     return df2    
