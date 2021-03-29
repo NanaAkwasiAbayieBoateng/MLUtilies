@@ -1,4 +1,4 @@
-# MLUtilies
+# MLUtilities
 A collection of scripts for ML utilization
 
 
